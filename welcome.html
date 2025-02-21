@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Ultimate Penetration Testing Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            color: #ffffff;
+            background: url('static/templates/landingpage.jpg') no-repeat center center/cover;
+            background-attachment: fixed;
+            position: relative;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .container h1 {
+            font-size: 3em;
+            font-weight: 700;
+            color: #00d1b2;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+        }
+        .container p {
+            font-size: 1.3em;
+            color: #ffffff;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+        }
+        .benefits {
+            text-align: left;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        .benefits h2 {
+            font-size: 2em;
+            font-weight: 600;
+            color: #00d1b2;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+        }
+        .benefits ul {
+            list-style: none;
+            padding: 0;
+        }
+        .benefits ul li {
+            font-size: 1.1em;
+            color: #ffffff;
+            padding: 10px 0;
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+        }
+        .cta-button {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .cta-button button {
+            text-decoration: none;
+            background-color: #00d1b2;
+            color: #ffffff;
+            padding: 15px 40px;
+            font-size: 1.2em;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        .cta-button button:hover {
+            background-color: #00b09e;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px rgba(0, 176, 158, 0.4);
+        }
+        .did-you-know {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 100%;
+            padding: 20px;
+            color: #ffffff;
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+            overflow-y: auto;
+            z-index: 5;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .did-you-know h3 {
+            font-size: 1.8em;
+            font-weight: 600;
+            color: #00d1b2;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+        }
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Log Section Styles */
+        .log-section {
+            position: relative;
+            z-index: 100;
+            max-width: 1200px;
+            margin: 100px auto 20px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            text-align: left;
+        }
+        .log-section h3 {
+            margin-top: 0;
+            color: #00d1b2;
+        }
+        /* Loading Spinner Styles */
+        #loadingSpinner {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            text-align: center;
+            color: #ffffff;
+        }
+        #loadingSpinner img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+        #loadingSpinner p {
+            font-size: 1.2em;
+            color: #ffffff;
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+        }
+        @media (max-width: 768px) {
+            .container {
+                margin-left: 20px;
+                margin-right: 20px;
+                padding: 20px;
+            }
+            .did-you-know {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Ultimate Penetration Testing Platform<br>Where Learning Meets Action!</h1>
+        <p>Unlock the full potential of penetration testing with our unique textbook-driven approach. Whether you're just starting out or tackling advanced exploitation techniques, our platform provides you with a curated selection of textbooks to guide your journey. Seamlessly transition from theory to real-world skills as you test, exploit, and secure systems with hands-on practice.</p>
+        <div class="benefits">
+            <h2>Why Choose a Textbook-Driven Approach?</h2>
+            <ul>
+                <li><strong>Consistency:</strong> Follow expert-designed steps to ensure nothing is missed.</li>
+                <li><strong>Best Practices:</strong> Learn and apply cutting-edge security tactics.</li>
+                <li><strong>Repeatability:</strong> Standardized procedures allow for easy test replication.</li>
+                <li><strong>Actionable Documentation:</strong> Gain insights into vulnerabilities with detailed reports.</li>
+            </ul>
+        </div>
+        <div class="cta-button">
+            <button id="getStartedButton">Get Started</button>
+            <button id="startTestingButton">Start Testing</button>
+        </div>
+    </div>
+    <div class="did-you-know">
+        <h3>Did You Know?</h3>
+        <p id="did-you-know-text">
+            Penetration testing helps identify vulnerabilities before attackers can exploit them.
+        </p>
+    </div>
+    <div class="footer">
+        &copy; 2025 Ultimate Penetration Testing Platform. All Rights Reserved.
+    </div>
+    <!-- Loading Spinner -->
+    <div id="loadingSpinner">
+        <img src="static/images/spinner.gif" alt="Loading...">
+        <p>Extraction in progress, please wait...</p>
+    </div>
+    <!-- Log Section for Extraction Log via Iframe -->
+    <div class="log-section">
+        <h3>Extraction Log</h3>
+        <iframe src="/extraction_log" style="width:100%; height:300px; border:none;"></iframe>
+    </div>
+    <!-- JavaScript -->
+    <script>
+        // Array of facts for "Did You Know?"
+        const facts = [
+            "Penetration testing helps identify vulnerabilities before attackers can exploit them.",
+            "Ethical hacking is a legally authorized practice of bypassing system security to identify weaknesses.",
+            "The first documented penetration test dates back to the 1960s, conducted by the U.S. government.",
+            "Many penetration testers use frameworks like Metasploit to streamline their testing processes.",
+            "Social engineering is a critical component of penetration testing that targets human weaknesses.",
+            "Red teaming is a more advanced form of penetration testing that simulates a real-world attack scenario.",
+            "Credential stuffing attacks can be tested using automated tools to identify weak or reused passwords.",
+            "Network segmentation can significantly limit the impact of a potential breach during a penetration test.",
+            "Regular penetration testing is essential for maintaining compliance with security standards like PCI-DSS.",
+            "Privilege escalation is a key phase where testers attempt to gain higher-level access after initial entry.",
+            "Patch management is crucial for reducing vulnerabilities identified during penetration testing.",
+            "Many penetration testers rely on tools like Burp Suite to test web application security.",
+            "Penetration testing often includes both internal and external assessments to evaluate all potential attack vectors.",
+            "Virtual machines and isolated environments are critical for safely conducting penetration tests.",
+            "Post-exploitation testing helps assess the potential impact of an attacker gaining unauthorized access.",
+            "Many industries, including finance and healthcare, require penetration testing to maintain compliance.",
+            "Regular user education and awareness training can reduce the success rate of phishing attacks by up to 90%.",
+            "Wireless penetration testing evaluates the security of a network's Wi-Fi configuration and protocols.",
+            "Penetration testing tools like Nessus and OpenVAS are commonly used to scan for vulnerabilities.",
+            "Social engineering attacks remain one of the most effective methods for compromising organizations.",
+            "Physical security assessments, such as testing access to servers or offices, are also part of penetration testing.",
+            "Cloud penetration testing is a growing field as more organizations move their infrastructure to the cloud.",
+            "Penetration testers often use Kali Linux, a specialized Linux distribution with tools for ethical hacking.",
+            "Data exfiltration simulations during penetration tests can show how quickly sensitive data could be stolen."
+        ];
+
+        let factIndex = 0;
+        function updateFact() {
+            factIndex = (factIndex + 1) % facts.length;
+            document.getElementById("did-you-know-text").textContent = facts[factIndex];
+        }
+        setInterval(updateFact, 10000);
+
+        // Handle "Get Started" button click
+        document.getElementById("getStartedButton").addEventListener("click", () => {
+            document.getElementById("loadingSpinner").style.display = "block";
+            const getStartedButton = document.getElementById("getStartedButton");
+            getStartedButton.innerText = "Processing...";
+            getStartedButton.disabled = true;
+
+            fetch('/start-extraction', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === "Extraction process started.") {
+                        pollExtractionStatus();
+                    } else {
+                        alert(data.status);
+                        document.getElementById("loadingSpinner").style.display = "none";
+                        getStartedButton.disabled = false;
+                        getStartedButton.innerText = "Get Started";
+                    }
+                })
+                .catch(error => {
+                    console.error("Error starting extraction:", error);
+                    alert("Failed to start extraction.");
+                    document.getElementById("loadingSpinner").style.display = "none";
+                    getStartedButton.disabled = false;
+                    getStartedButton.innerText = "Get Started";
+                });
+        });
+
+        function pollExtractionStatus() {
+            const interval = setInterval(() => {
+                fetch('/extraction-status', { method: 'GET' })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.status === "completed") {
+                            clearInterval(interval);
+                            alert("Extraction completed successfully.");
+                            document.getElementById("loadingSpinner").style.display = "none";
+                            const getStartedButton = document.getElementById("getStartedButton");
+                            getStartedButton.disabled = false;
+                            getStartedButton.innerText = "Get Started";
+                        } else if (data.status === "failed") {
+                            clearInterval(interval);
+                            alert("Extraction failed. Please try again.");
+                            document.getElementById("loadingSpinner").style.display = "none";
+                            const getStartedButton = document.getElementById("getStartedButton");
+                            getStartedButton.disabled = false;
+                            getStartedButton.innerText = "Get Started";
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Error fetching extraction status:", error);
+                        clearInterval(interval);
+                        alert("Failed to fetch extraction status.");
+                        document.getElementById("loadingSpinner").style.display = "none";
+                        const getStartedButton = document.getElementById("getStartedButton");
+                        getStartedButton.disabled = false;
+                        getStartedButton.innerText = "Get Started";
+                    });
+            }, 2000);
+        }
+
+        // Handle "Start Testing" button click
+        // Redirect to index.html (which shows server.log)
+        document.getElementById("startTestingButton").addEventListener("click", () => {
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+</html>
